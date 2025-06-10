@@ -1,0 +1,207 @@
+
+/*Abinav Kadel - 200605901*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: darkslategray;
+  line-height: 1.7;
+}
+h1::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/427/427735.png'); /* leaf icon */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.page-wrapper {
+  max-width: 960px;
+  margin: 60px auto;
+  background-color: white;
+  opacity: 0.9; /* Semi-transparent */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px gray;
+}
+
+.sidebar li::before {
+  content: "🌿 ";
+}
+
+.design-name {
+  font-weight: bold;
+  color: darkgreen;
+}
+.designer-name {
+  font-style: italic;
+  color: goldenrod;
+}
+
+
+/* Header-Child combinator */
+section > header {
+  text-align: center;
+  background-color: lightgreen;
+  padding: 20px;
+  border-bottom: 2px solid green;
+}
+
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: forestgreen;
+  font-size: 3rem;
+}
+
+
+#zen-intro h2 {
+  font-size: 1.5rem;
+  color: seagreen;
+}
+
+/*  Class selector: summary box */
+.summary {
+  background-color: beige;
+  padding: 20px;
+  margin-top: 20px;
+  border-left: 4px solid darkgreen;
+}
+
+/* ID Selector */
+#zen-supporting {
+  margin-top: 40px;
+}
+
+/* Pseudo-element selector */
+.summary p::first-line {
+  font-weight: bold;
+  color: navy;
+}
+
+
+
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  color: darkolivegreen;
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+
+
+a:hover {
+  color: crimson;
+  font-weight: bold;
+
+}
+
+/* using Attribute selector */
+a[title] {
+  color: black;
+}
+
+/* General sibling combinator  */
+h3 ~ p {
+  font-style: italic;
+}
+
+
+/* Descendant combinator  */
+aside .resources {
+  background-color: honeydew;
+  padding: 15px;
+  margin-top: 30px;
+  border-left: 3px solid green;
+}
+
+
+/* Direct sibling combinator  */
+h3 + p {
+  font-weight: bold;
+}
+
+
+.sidebar {
+  margin-top: 40px;
+  background-color: lightyellow;
+  padding: 20px;
+  border-left: 5px solid darkgoldenrod;
+}
+
+/* Using animation for intro fade  */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*styling Footer link  */
+footer {
+  background-color: lightseagreen;
+  text-align: center;
+  padding: 15px;
+  border-top: 3px solid green;
+  border-radius: 0 0 12px 12px;
+}
+
+footer a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 8px 12px;
+  color: white;
+  background-color: seagreen;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Adding emoji */
+footer a::before {
+  content: "🌿 ";
+}
+
+/* Hover effect */
+footer a:hover {
+  background-color: darkgreen;
+  color: lightyellow;
+}
+
+a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+
+.intro {
+  animation: fadeIn 1.5s ease-out;
+}
+
+
